@@ -5,3 +5,5 @@ export const GIT_ICON = "/assets/icons/git.png";
 export const ACN_LOGO = "/assets/images/accenture-logo.png";
 export const DELOITTE_LOGO = "/assets/images/deloitte-Logo.png"
 export const KBTG_LOGO = "/assets/images/kbtg-logo.png"
+export const LINKEDIN_LINK = "https://www.linkedin.com/in/tunsuda-boonloed-735b1220a/";
+export const GIT_LINK = "https://github.com/bungearnss";
