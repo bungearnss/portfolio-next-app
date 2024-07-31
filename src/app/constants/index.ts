@@ -1,4 +1,3 @@
-export const PF_LOGO = "/assets/images/Logo.png";
 export const PROFILE = "/assets/images/profile.jpg";
 export const IN_ICON = "/assets/icons/linkedin.png";
 export const GIT_ICON = "/assets/icons/git.png";
