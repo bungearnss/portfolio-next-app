@@ -12,7 +12,7 @@ const config: Config = {
         'custom-bg': '#f5f5f0',
         'acn-bg': '#e1b7f7',
         'deloitte-bg': '#bcd68d',
-        'kbtg-bg': '#f0bcc1'
+        'kbtg-bg': '#f0bcc1',
       },
       fontFamily: {
         nunito: ['Nunito Sans', 'sans-serif'],
