@@ -13,7 +13,8 @@ const config: Config = {
         'acn-bg': '#e1b7f7',
         'deloitte-bg': '#bcd68d',
         'kbtg-bg': '#f0bcc1',
-        'border-custom': '#ecede5'
+        'border-custom': '#ecede5',
+        'proj-bg': '#d8dfe0'
       },
       fontFamily: {
         nunito: ['Nunito Sans', 'sans-serif'],

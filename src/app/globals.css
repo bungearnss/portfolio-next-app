@@ -19,6 +19,14 @@
     md:px-6 md:py-3;
   }
 
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .fade-out {
+    animation: fadeOut 0.5s ease-in-out;
+  }
+
   .loader {
     width: 45px;
     aspect-ratio: 0.75;
@@ -29,6 +37,24 @@
       var(--c) 100% 50%;
     background-size: 20% 50%;
     animation: loading 1s infinite linear;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
   }
 
   @keyframes loading {
