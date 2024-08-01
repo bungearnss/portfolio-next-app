@@ -78,6 +78,102 @@ const certData = [
     img: SKILLSOFT,
     url: "https://skillsoft.digitalbadges.skillsoft.com/8ebd22a3-3aeb-47f2-a34e-a8aa72723201",
   },
+  {
+    id: "13",
+    title: "Application Development with Node.js: Language Fundamentals",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/9e50e8e0-44ed-4a08-8271-1ce28726992e",
+  },
+  {
+    id: "14",
+    title: "Flutter Development: Introducing Flutter & the Dart Programming Language",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/91ddacfe-b873-4952-9496-2acaeb549f5b",
+  },
+  {
+    id: "15",
+    title: "Flutter Development: Using Classes & Objects in Dart",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/2e0f12ed-5624-4690-b983-7548d7804ab1",
+  },
+  {
+    id: "16",
+    title: "Flutter and Backends: Connecting to Remote Backends Using HTTP Requests",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/bd38030c-b740-427b-a2c6-d44b2dad651f",
+  },
+  {
+    id: "17",
+    title: "Flutter Development: Using Variables, Collections, & Functions in Dart",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/dc0f62a9-f0ac-49d9-9227-448d15da31c9",
+  },
+  {
+    id: "18",
+    title: "Flutter and Backends: Integrating Flutter with Google Firebase",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/b774a05a-b799-4d0e-8d69-3967d08b0b90",
+  },
+  {
+    id: "19",
+    title: "Connecting to & Configuring a Database Instance",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/509afbfb-8a44-4ad2-ac75-2347f35e079d",
+  },
+  {
+    id: "20",
+    title: "Memory Tuning Techniques",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/1d83f14c-aebf-42c9-8b22-cde9b1613fa0",
+  },
+  {
+    id: "21",
+    title: "Oracle Database 12c R2 SQL: Using Structured Query Language (SQL)",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/697b90ff-1a65-4547-af8c-a3bbf7c5f6db",
+  },
+  {
+    id: "22",
+    title: "Relational Database Concepts",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/f80ab04a-3107-4c4b-a07e-745373c104c3",
+  },
+  {
+    id: "23",
+    title: "API Security",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/9abb2e58-75cd-4dae-8b8d-98047fbd6a59",
+  },
+  {
+    id: "24",
+    title: "Java Certified Foundations Associate: Java Methods",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/554a84fd-1f62-453b-bc77-0de249ea6e90",
+  },
+  {
+    id: "25",
+    title: "Java Certified Foundations Associate: Decision Statements",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/98eab2cb-746f-4367-8314-0746a9b37163",
+  },
+  {
+    id: "26",
+    title: "Java Certified Foundations Associate: Basic Elements",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/28316e65-eb04-4f03-bc49-fddbcb17e1bc",
+  },
+  {
+    id: "27",
+    title: "Java Certified Foundations Associate: Classes & Constructors",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/358d9b7b-a672-4af3-a7f6-774121f92c21",
+  },
+  {
+    id: "28",
+    title: "Java Certified Foundations Associate: Data Types",
+    img: SKILLSOFT,
+    url: "https://skillsoft.digitalbadges.skillsoft.com/89185981-88f3-45fb-9e72-a4a0c7b28495",
+  },
 ];
 
 export default function Certificate() {
