@@ -25,5 +25,9 @@ export const AMAZON_CLONE = "/assets/images/experience/amazon-clone.png";
 export const CLOVER_SUPPLY = "/assets/images/experience/cloversupply.png";
 export const ORG = "/assets/images/experience/organization.png";
 
+/* Certificate */
+export const UDEMY = "/assets/icons/udemy.png";
+export const SKILLSOFT = "/assets/icons/skillsoft.png";
+
 export const LINKEDIN_LINK = "https://www.linkedin.com/in/tunsuda-boonloed-735b1220a/";
 export const GIT_LINK = "https://github.com/bungearnss";
