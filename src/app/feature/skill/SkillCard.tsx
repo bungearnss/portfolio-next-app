@@ -3,16 +3,40 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 interface SkillCardProps {
+  id: string;
   icon: string;
   imgName: string;
 }
 
-export default function SkillCard({ icon, imgName }: SkillCardProps) {
-
+export default function SkillCard({ icon, imgName, id }: SkillCardProps) {
+    const numericId = parseInt(id);
+    let borderClass = '';
+    let bgColorClass = '';
+  
+    if ([1, 2, 3, 4].includes(numericId)) {
+      bgColorClass = numericId % 2 === 0 ? 'bg-custom-bg' : 'bg-white';
+    } else {
+      bgColorClass = numericId % 2 === 0 ? 'bg-white' : 'bg-custom-bg';
+    }
+  
+    switch (true) {
+      case [5, 6, 7].includes(numericId):
+        borderClass = 'border border-t-0 border-l-0 border-r border-b-0 border-border-custom';
+        break;
+      case numericId === 1:
+        borderClass = 'border border-t-0 border-l-0 border-r-0 border-b border-border-custom';
+        break;
+      case numericId === 8:
+        borderClass = 'border border-t-0 border-l-0 border-r-0 border-b-0 border-border-custom';
+        break;
+      default:
+        borderClass = 'border border-t-0 border-l-0 border-r border-b border-border-custom';
+        break;
+    }
 
   return (
     <div
-      className="bg-custom-bg flex transform cursor-pointer items-center justify-center rounded-lg bg-opacity-50 p-4 py-6 shadow-lg transition-transform duration-100 ease-in-out hover:scale-105 hover:shadow-xl"
+      className={`${bgColorClass} flex transform items-center justify-center p-4 py-6 ${borderClass}`}
     >
       <div className="flex items-center justify-center">
         <Image
@@ -20,7 +44,6 @@ export default function SkillCard({ icon, imgName }: SkillCardProps) {
           src={icon}
           width={70}
           height={70}
-          objectFit="contain"
         />
       </div>
     </div>

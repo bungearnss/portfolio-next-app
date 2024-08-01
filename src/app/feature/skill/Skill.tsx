@@ -25,7 +25,7 @@ const skillData = [
 
 export default function Skill() {
   return (
-    <section className="flex flex-col items-center justify-between px-10 py-20 lg:flex-row">
+    <section className="flex flex-col items-center justify-between py-20 lg:flex-row">
       <div className="mb-10 w-full lg:mb-0 lg:w-1/2">
         <h2 className="mb-4 pr-10 text-4xl font-bold lg:pr-20">
           Experience with a variety of tech stacks in various industries
@@ -36,10 +36,11 @@ export default function Skill() {
           effectively.
         </p>
       </div>
-      <div className="grid w-full grid-cols-4 justify-center gap-x-4 gap-y-6 lg:w-1/2">
+      <div className="grid w-full grid-cols-4 justify-center lg:w-1/2">
         {skillData.map((item) => (
           <SkillCard
             key={item.id}
+            id={item.id}
             icon={item.skillLogo}
             imgName={item.skillName}
           />
