@@ -49,11 +49,11 @@ export default function Header() {
       <div className="flex items-center justify-center">
         <a
           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-gray-400 px-3 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          className="group rounded-lg bg-black border border-gray-400 px-3 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p className="font-semibold uppercase">Contact me</p>
+          <p className="font-semibold uppercase text-white hover:text-black">Contact me</p>
         </a>
       </div>
     </header>
