@@ -2,18 +2,18 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    formats: ['image/webp', 'image/jpeg', 'image/png'],
+    formats: ["image/webp"],
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '**.cloudinary.com',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "**.cloudinary.com",
+        pathname: "/**",
       },
     ],
   },
   eslint: {
-    dirs: ['src/app/'],
-},
-}
+    dirs: ["src/app/"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

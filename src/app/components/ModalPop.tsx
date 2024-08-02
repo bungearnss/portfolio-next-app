@@ -18,7 +18,7 @@ const ModalPop: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
           onClick={onClose}
           className="absolute right-3 top-3 cursor-pointer hover:text-gray-700"
         >
-          <Image src={CLOSE_ICON} width={20} height={20} alt="close-button" />
+          <Image priority src={CLOSE_ICON} width={20} height={20} alt="close-button" />
         </div>
         <div className="h-full overflow-auto">{children}</div>
       </div>

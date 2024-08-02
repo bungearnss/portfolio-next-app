@@ -29,6 +29,7 @@ export default function Introduce() {
       <div className="flex flex-row items-center gap-x-6 md:flex-col md:items-start md:justify-start">
         <div className="dm:h-20 dm:w-20 flex h-14 w-14 items-center justify-center overflow-hidden rounded-full">
           <Image
+            priority
             src={PROFILE}
             alt="profile-pic"
             width={76}
@@ -56,7 +57,13 @@ export default function Introduce() {
             onMouseEnter={() => showTooltip("LinkedIn")}
             onMouseLeave={hideTooltip}
           >
-            <Image src={IN_ICON} alt="linkedin-icon" width={35} height={35} />
+            <Image
+              priority
+              src={IN_ICON}
+              alt="linkedin-icon"
+              width={35}
+              height={35}
+            />
             {tooltip === "LinkedIn" && (
               <div className="absolute top-full mt-2 rounded bg-gray-500 px-2 py-1 text-xs text-white">
                 LinkedIn Profile
@@ -69,7 +76,13 @@ export default function Introduce() {
             onMouseEnter={() => showTooltip("GitHub")}
             onMouseLeave={hideTooltip}
           >
-            <Image src={GIT_ICON} alt="git-icon" width={35} height={35} />
+            <Image
+              priority
+              src={GIT_ICON}
+              alt="git-icon"
+              width={35}
+              height={35}
+            />
             {tooltip === "GitHub" && (
               <div className="absolute top-full mt-2 rounded bg-gray-500 px-2 py-1 text-xs text-white">
                 GitHub Profile
