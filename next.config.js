@@ -11,9 +11,6 @@ const nextConfig = {
       },
     ],
   },
-  eslint: {
-    dirs: ["src/app/"],
-  },
 };
 
 module.exports = nextConfig;

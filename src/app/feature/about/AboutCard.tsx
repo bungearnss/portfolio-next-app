@@ -7,7 +7,6 @@ interface WidgetCardProps {
   description: string;
   onClick?: () => void;
   iconSrc: string;
-  bgColor: string;
   time: string;
 }
 
@@ -16,14 +15,19 @@ function AboutCard({
   description,
   onClick,
   iconSrc,
-  bgColor,
   time,
 }: WidgetCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   let imgWidth = 100;
-
+  let bgColor = "bg-proj-bg";
   if (title.includes("KASI")) {
     imgWidth = 220;
+    bgColor = "bg-kbtg-bg";
+  }
+  if (title.includes("ACC")) {
+    bgColor = "bg-acn-bg";
+  } else if (title.includes("Del")) {
+    bgColor = "bg-deloitte-bg";
   }
 
   return (

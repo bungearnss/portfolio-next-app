@@ -63,6 +63,7 @@ export default function About() {
     setIsModalOpen(false);
   };
 
+  let bg = "bg-proj-bg";
   return (
     <div className="flex w-full flex-col items-center justify-center">
       <p className="section-header">My Transformative Journey</p>
@@ -81,7 +82,6 @@ export default function About() {
                 description={item.coDes}
                 onClick={() => handleCardClick(item.coId)}
                 iconSrc={item.coLogo}
-                bgColor={item.coBgColor}
                 time={item.time}
               />
             </div>
