@@ -2,16 +2,17 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    formats: ['image/webp'],
+    formats: ['image/webp', 'image/jpeg', 'image/png'],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'res.cloudinary.com',
+        hostname: '**.cloudinary.com',
+        pathname: '/**',
       },
     ],
   },
   eslint: {
-    dirs: ['src/app'],
+    dirs: ['src/app/'],
 },
 }
 
