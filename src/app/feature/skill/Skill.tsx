@@ -27,10 +27,10 @@ export default function Skill() {
   return (
     <section className="flex flex-col items-center justify-between md:py-20 lg:flex-row">
       <div className="mb-10 w-full lg:mb-0 lg:w-1/2">
-        <h2 className="mb-4 pr-10 text-xl md:text-4xl font-bold lg:pr-20">
+        <h2 className="section-header mb-4 pr-10 lg:pr-20">
           Experience with a variety of tech stacks in various industries
         </h2>
-        <p className="md:mb-8 pr-10 text-gray-600 lg:pr-20">
+        <p className="pr-10 text-gray-600 md:mb-8 lg:pr-20">
           My experience spans across various projects and industries, allowing
           me to adapt and deliver solutions that meet business needs
           effectively.

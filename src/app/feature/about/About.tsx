@@ -152,8 +152,8 @@ export default function About() {
 
   return (
     <div className="flex w-full flex-col items-center justify-center">
-      <p className="text-xl font-semibold md:text-3xl">My Transformative Journey</p>
-      <p className="text-xl font-semibold md:text-3xl">In the IT Industry</p>
+      <p className="section-header">My Transformative Journey</p>
+      <p className="section-header">In the IT Industry</p>
       <div className="flex w-full flex-wrap items-center justify-center md:gap-10 gap-6 py-10 px-10">
         {coData.map((item) => (
           <div key={item.coId}>

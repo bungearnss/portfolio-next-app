@@ -70,10 +70,10 @@ export default function Experience() {
   };
   return (
     <div className="flex w-full flex-col items-center justify-center">
-      <p className="text-xl font-semibold md:text-3xl md:py-5">
+      <p className="section-header">
         My Extensive Experience
       </p>
-      <div className="grid w-11/12 grid-cols-3 items-center justify-evenly gap-4 px-5 py-5 md:grid-cols-2 md:gap-1">
+      <div className="grid w-11/12 grid-cols-3 items-center justify-evenly gap-4 px-5 py-10 md:grid-cols-2 md:gap-1">
         <div
           className={`col-span-2 md:col-span-1 flex w-full justify-center transition-opacity duration-500 ${selectedId ? "fade-in" : "fade-out"}`}
         >
