@@ -10,7 +10,6 @@ export async function GET() {
     const db = client.db(dbName);
     const collection = db.collection(collectionName);
     const data = await collection.find({}).toArray();
-    console.log(`exp : ${JSON.stringify(data)}`)
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch data' }, { status: 500 });
