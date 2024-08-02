@@ -1,29 +1,39 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import SkillCard from "./SkillCard";
 
-import {
-  SPRING_LOGO,
-  NODE_LOGO,
-  REACT_LOGO,
-  NEXTJS_LOGO,
-  FLUTTER_LOGO,
-  GRPC_LOGO,
-  POSTGRESQL_LOGO,
-  AZURE_LOGO,
-} from "../../constants";
-
-const skillData = [
-  { id: "1", skillLogo: SPRING_LOGO, skillName: "spring" },
-  { id: "2", skillLogo: NODE_LOGO, skillName: "node" },
-  { id: "3", skillLogo: REACT_LOGO, skillName: "react" },
-  { id: "4", skillLogo: NEXTJS_LOGO, skillName: "nextjs" },
-  { id: "5", skillLogo: FLUTTER_LOGO, skillName: "flutter" },
-  { id: "6", skillLogo: GRPC_LOGO, skillName: "grpc" },
-  { id: "7", skillLogo: POSTGRESQL_LOGO, skillName: "postgresql" },
-  { id: "8", skillLogo: AZURE_LOGO, skillName: "azure" },
-];
+import { SkillEntity } from "./models/SkillEntity";
+import Skeleton from "@/app/components/Skeleton";
 
 export default function Skill() {
+  const [skills, setSkills] = useState<SkillEntity[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  useEffect(() => {
+    const fetchSkills = async () => {
+      try {
+        const response = await fetch("/api/skills");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setSkills(
+          data.map((skill: any) => ({
+            id: skill.id,
+            skillLogo: skill.skillLogo,
+            skillName: skill.skillName,
+          })),
+        );
+      } catch (error) {
+        setError("Failed to fetch skills");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSkills();
+  }, []);
+
   return (
     <section className="flex flex-col items-center justify-between md:py-20 lg:flex-row">
       <div className="mb-10 w-full lg:mb-0 lg:w-1/2">
@@ -36,16 +46,22 @@ export default function Skill() {
           effectively.
         </p>
       </div>
-      <div className="grid w-full grid-cols-4 justify-center lg:w-1/2">
-        {skillData.map((item) => (
-          <SkillCard
-            key={item.id}
-            id={item.id}
-            icon={item.skillLogo}
-            imgName={item.skillName}
-          />
-        ))}
-      </div>
+      {loading ? (
+        <div className="flex h-full w-full lg:w-1/2 items-center justify-center">
+          <Skeleton />
+        </div>
+      ) : (
+        <div className="grid w-full grid-cols-4 justify-center lg:w-1/2">
+          {skills.map((item) => (
+            <SkillCard
+              key={item.id}
+              id={item.id}
+              icon={item.skillLogo}
+              imgName={item.skillName}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
