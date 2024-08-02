@@ -2,6 +2,7 @@
 import { useState } from "react";
 import UseWindowSize from "./components/UseWindowSize";
 import { CLOSE_ICON, MENU_ICON } from "./constants";
+import Image from "next/image";
 
 export default function Header() {
   const size = UseWindowSize();
@@ -74,10 +75,12 @@ export default function Header() {
         </header>
       ) : (
         <div className="fixed left-0 right-0 top-0 z-50 flex w-full justify-between bg-white p-4 shadow-md">
-          <img
+          <Image
             src={isMenuOpen ? CLOSE_ICON : MENU_ICON}
             alt="Menu Icon"
-            className="h-6 w-6 cursor-pointer"
+            width={24}
+            height={24}
+            className="object-contain h-auto"
             onClick={toggleMenu}
           />
         </div>

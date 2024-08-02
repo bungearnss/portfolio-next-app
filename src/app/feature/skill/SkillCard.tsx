@@ -65,7 +65,7 @@ export default function SkillCard({ icon, imgName, id }: SkillCardProps) {
           src={icon}
           width={70}
           height={70}
-          className="h-auto w-4/5 object-contain"
+          className="object-contain h-auto w-auto"
         />
         {tooltip === imgName && <div className={tooltipSty}>{imgName}</div>}
       </div>
