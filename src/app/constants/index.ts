@@ -1,6 +1,8 @@
 export const PROFILE = "/assets/images/profile.jpg";
 export const IN_ICON = "/assets/icons/linkedin.png";
 export const CALENDAR_ICON ="/assets/icons/calendar.png";
+export const CLOSE_ICON = "/assets/icons/close.png";
+export const MENU_ICON = "/assets/icons/menu.png";
 
 /* Work Experience */
 export const GIT_ICON = "/assets/icons/git.png";
