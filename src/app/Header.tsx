@@ -76,11 +76,12 @@ export default function Header() {
       ) : (
         <div className="fixed left-0 right-0 top-0 z-50 flex w-full justify-between bg-white p-4 shadow-md">
           <Image
+            priority
             src={isMenuOpen ? CLOSE_ICON : MENU_ICON}
             alt="Menu Icon"
             width={24}
             height={24}
-            className="object-contain h-auto"
+            className="h-auto object-contain"
             onClick={toggleMenu}
           />
         </div>
