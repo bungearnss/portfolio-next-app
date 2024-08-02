@@ -200,7 +200,7 @@ export default function Certificate() {
   return (
     <div className="flex w-full flex-col items-center justify-center">
       <p className="text-3xl font-semibold">My Certificate</p>
-      <div className="grid max-w-full grid-cols-5 gap-5 px-20 py-10">
+      <div className="grid sm:w-screen max-w-full grid-cols-5 gap-5 px-20 py-10">
         {certData.slice(0, visibleCount).map((item) => (
           <CertificateCard
             key={item.id}

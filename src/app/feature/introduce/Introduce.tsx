@@ -30,7 +30,7 @@ export default function Introduce() {
         <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full">
           <Image src={PROFILE} alt="profile-pic" width={76} height={76} />
         </div>
-        <p className="pt-5 font-nunito text-4xl">
+        <p className="pt-5 font-nunito text-4xl sm:pr-5">
           Say Hello to <span className="font-semibold">Tunsuda Boonloed</span>
         </p>
       </div>
