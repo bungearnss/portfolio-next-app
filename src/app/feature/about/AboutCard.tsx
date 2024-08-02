@@ -11,11 +11,18 @@ interface WidgetCardProps {
   time: string;
 }
 
-function AboutCard({ title, description, onClick, iconSrc, bgColor, time }: WidgetCardProps) {
+function AboutCard({
+  title,
+  description,
+  onClick,
+  iconSrc,
+  bgColor,
+  time,
+}: WidgetCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   let imgWidth = 100;
 
-  if (title.includes("KASI")){
+  if (title.includes("KASI")) {
     imgWidth = 220;
   }
 
@@ -23,19 +30,34 @@ function AboutCard({ title, description, onClick, iconSrc, bgColor, time }: Widg
     <div
       className={`transform cursor-pointer rounded-lg bg-white p-4 shadow-lg transition-transform duration-300 ease-in-out ${
         isHovered ? "scale-105 shadow-xl" : "scale-100"
-      } w-60 h-80 sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl`}
+      } h-52 w-40 sm:max-w-sm md:h-80 md:w-60 md:max-w-md lg:max-w-lg xl:max-w-xl`}
       onClick={onClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative mb-4 flex w-full items-center justify-center">
-        <div className={`flex h-28 w-full items-center justify-center rounded-md bg-opacity-30 p-2 ${bgColor}`}>
-          <Image src={iconSrc} alt="logo" width={imgWidth} height={200} />
+        <div
+          className={`flex h-14 w-full items-center justify-center rounded-md bg-opacity-30 p-2 md:h-28 ${bgColor}`}
+        >
+          <Image
+            src={iconSrc}
+            alt={`${title}-logo`}
+            width={imgWidth}
+            height={200}
+            className="object-contain"
+            style={{ width: "60%", height: "auto" }}
+          />
         </div>
       </div>
-      <h3 className="mb-2 break-words text-base font-semibold">{title}</h3>
-      <p className="break-words text-gray-600">{description}</p>
-      <p className="absolute bottom-3 right-5 break-words text-xs text-gray-500">{time}</p>
+      <h3 className="break-words text-sm font-semibold md:mb-2 md:text-base">
+        {title}
+      </h3>
+      <p className="break-words text-xs text-gray-600 md:text-base">
+        {description}
+      </p>
+      <p className="break-words text-xs text-gray-500 md:absolute md:bottom-3 md:right-5 md:text-sm">
+        {time}
+      </p>
     </div>
   );
 }

@@ -28,12 +28,14 @@ export default function ExperienceCard({
           <Image
             src={img}
             alt={`${title}-logo`}
-            layout="fill"
-            className="absolute left-0 top-0 h-full w-full object-cover px-2"
+            width={500}
+            height={300}
+            className="object-cover"
+            style={{ width: '100%', height: 'auto' }}
           />
         </div>
       </div>
-      <h3 className="mb-2 break-words text-lg font-semibold">{title}</h3>
+      <h3 className="mb-2 break-words text-base md:text-lg font-semibold">{title}</h3>
       <div className="flex flex-row items-center justify-start h-fit">
         <Image
           src={CALENDAR_ICON}
@@ -42,16 +44,16 @@ export default function ExperienceCard({
           height={16}
           className="mr-2"
         />
-        <p className="break-words text-gray-600">{date}</p>
+        <p className="text-xs md:text-base break-words text-gray-600">{date}</p>
       </div>
-      <p className="mt-5 break-words text-gray-600">{description}</p>
+      <p className="text-sm md:text-base mt-5 break-words text-gray-600">{description}</p>
       <div className="mt-10 flex items-end justify-end">
         <div
           className="group cursor-pointer rounded-lg bg-black border border-gray-400 px-3 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           rel="noopener noreferrer"
           onClick={onClick}
         >
-          <p className="text-sm font-semibold text-white uppercase transition-colors hover:text-black">Go to website</p>
+          <p className="text-xs font-semibold text-white uppercase transition-colors hover:text-black">Go to website</p>
         </div>
       </div>
     </div>

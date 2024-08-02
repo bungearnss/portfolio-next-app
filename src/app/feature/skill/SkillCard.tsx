@@ -16,10 +16,12 @@ export default function SkillCard({ icon, imgName, id }: SkillCardProps) {
 
   if ([1, 2, 3, 4].includes(numericId)) {
     bgColorClass = numericId % 2 === 0 ? "bg-custom-bg" : "bg-white";
-    tooltipSty = "absolute bottom-full mb-2 rounded bg-gray-500 px-2 py-1 text-xs text-white";
+    tooltipSty =
+      "absolute bottom-full mb-2 rounded bg-gray-500 px-2 py-1 text-xs text-white";
   } else {
     bgColorClass = numericId % 2 === 0 ? "bg-white" : "bg-custom-bg";
-    tooltipSty = "absolute top-full mt-2 rounded bg-gray-500 px-2 py-1 text-xs text-white";
+    tooltipSty =
+      "absolute top-full mt-2 rounded bg-gray-500 px-2 py-1 text-xs text-white";
   }
 
   switch (true) {
@@ -63,12 +65,9 @@ export default function SkillCard({ icon, imgName, id }: SkillCardProps) {
           src={icon}
           width={70}
           height={70}
+          className="h-auto w-4/5 object-contain"
         />
-         {tooltip === imgName && (
-              <div className={tooltipSty}>
-                {imgName}
-              </div>
-            )}
+        {tooltip === imgName && <div className={tooltipSty}>{imgName}</div>}
       </div>
     </div>
   );

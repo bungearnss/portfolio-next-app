@@ -26,8 +26,8 @@ export default function CertificateCard({
   >
     <div className="relative flex h-full w-full items-center justify-around p-4">
       <div className="flex h-full w-full flex-col items-center rounded-md">
-        <Image src={img} alt="cert-logo" width={imgSize} height={imgSize} />
-        <h3 className="truncated-title h-full w-full pt-2 text-center text-sm">
+        <Image src={img} alt={`${title}-cert-logo`} width={imgSize} height={imgSize} />
+        <h3 className="truncated-title h-full w-full pt-2 text-center text-xs md:text-sm">
           {title}
         </h3>
         <div className="card-hover-text">

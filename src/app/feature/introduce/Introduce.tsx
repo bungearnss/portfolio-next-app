@@ -25,20 +25,28 @@ export default function Introduce() {
     window.open(url, "_blank");
   };
   return (
-    <div className="grid w-full grid-cols-2 justify-around">
-      <div className="flex flex-col">
-        <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full">
-          <Image src={PROFILE} alt="profile-pic" width={76} height={76} />
+    <div className="grid w-full grid-cols-1 justify-around md:grid-cols-2">
+      <div className="flex flex-row items-center gap-x-6 md:flex-col md:items-start md:justify-start">
+        <div className="dm:h-20 dm:w-20 flex h-14 w-14 items-center justify-center overflow-hidden rounded-full">
+          <Image
+            src={PROFILE}
+            alt="profile-pic"
+            width={76}
+            height={76}
+            className="object-cover"
+            style={{ width: "100%", height: "auto" }}
+          />
         </div>
-        <p className="pt-5 font-nunito text-4xl sm:pr-5">
-          Say Hello to <span className="font-semibold">Tunsuda Boonloed</span>
+        <p className="pb-5 pt-5 font-nunito text-xl sm:pr-5 md:pb-0 md:text-lg lg:text-4xl">
+          Say Hello to <br />
+          <span className="font-semibold">Tunsuda Boonloed</span>
         </p>
       </div>
       <div className="flex flex-col">
-        <p className="pt-5 font-nunito text-4xl font-medium leading-snug">
-          A software engineer based on Bangkok, Thailand
+        <p className="pt-5 font-nunito text-base font-medium leading-snug md:text-lg lg:text-4xl">
+          A software engineer based on Bangkok Thailand
         </p>
-        <p className="mt-5 text-base leading-tight text-gray-600">
+        <p className="mt-5 text-sm leading-tight text-gray-600 md:text-base">
           Specializing in creating solutions that meet diverse business needs
         </p>
         <div className="flex flex-row gap-3 pt-10">

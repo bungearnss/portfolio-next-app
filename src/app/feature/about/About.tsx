@@ -152,11 +152,11 @@ export default function About() {
 
   return (
     <div className="flex w-full flex-col items-center justify-center">
-      <p className="text-3xl font-semibold">My Transformative Journey</p>
-      <p className="text-3xl font-semibold">In the IT Industry</p>
-      <div className="flex w-full flex-wrap items-center justify-center py-10 gap-10">
+      <p className="text-xl font-semibold md:text-3xl">My Transformative Journey</p>
+      <p className="text-xl font-semibold md:text-3xl">In the IT Industry</p>
+      <div className="flex w-full flex-wrap items-center justify-center md:gap-10 gap-6 py-10 px-10">
         {coData.map((item) => (
-          <div>
+          <div key={item.coId}>
             <AboutCard
               key={item.coId}
               title={item.coName}
@@ -172,6 +172,7 @@ export default function About() {
       <ModalPop isOpen={isModalOpen} onClose={handleCloseModal}>
         {selectedItem && (
           <AboutDetail
+            key={selectedItem.coName}
             title={selectedItem.coName}
             project={selectedItem.project}
             description={selectedItem.coDes}

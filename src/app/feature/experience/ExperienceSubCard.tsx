@@ -20,27 +20,27 @@ export default function ExperienceSubCard({
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
-      className={`w-full transform rounded-lg bg-white p-4 cursor-pointer shadow-lg transition-transform duration-300 ease-in-out ${
+      className={`w-full transform cursor-pointer rounded-lg bg-white py-6 px-4 md:p-4 shadow-lg transition-transform duration-300 ease-in-out ${
         isHovered ? "scale-105 shadow-xl" : "scale-100"
       } sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl`}
       onClick={onSelected}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className=" mb-4 grid w-full grid-cols-3 items-center justify-center">
-        <div className="col-span-2 w-full ">
+      <div className="grid w-full grid-cols-1 items-center justify-center md:grid-cols-2">
+        <div className="flex w-full justify-center ">
           <Image
             src={img}
             alt={`${title}-logo`}
             width={300}
             height={150}
+            className="object-cover w-full h-full"
           />
         </div>
-        <div className="col-span-1 flex w-full flex-col pl-2">
-          <h3 className="mb-2  text-sm font-semibold">{title}</h3>
+        <div className="hidden md:col-span-1 md:flex md:flex-col md:pl-2">
+          <h3 className="text-sm font-semibold">{title}</h3>
         </div>
       </div>
-      
     </div>
   );
 }

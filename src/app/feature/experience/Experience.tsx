@@ -70,10 +70,12 @@ export default function Experience() {
   };
   return (
     <div className="flex w-full flex-col items-center justify-center">
-      <p className="text-3xl font-semibold">My Extensive Experience</p>
-      <div className="grid w-full grid-cols-2 items-center justify-evenly px-10 py-10 sm:gap-10">
-      <div
-          className={`flex w-full justify-center transition-opacity duration-500 ${selectedId ? 'fade-in' : 'fade-out'}`}
+      <p className="text-xl font-semibold md:text-3xl md:py-5">
+        My Extensive Experience
+      </p>
+      <div className="grid w-11/12 grid-cols-3 items-center justify-evenly gap-4 px-5 py-5 md:grid-cols-2 md:gap-1">
+        <div
+          className={`col-span-2 md:col-span-1 flex w-full justify-center transition-opacity duration-500 ${selectedId ? "fade-in" : "fade-out"}`}
         >
           {expData
             .filter((item) => item.id === selectedId)
@@ -88,8 +90,9 @@ export default function Experience() {
               />
             ))}
         </div>
-        <div className={`h-150 w-75 grid grid-cols-2 gap-6 transition-transform duration-500 ${selectedId ? 'fade-in' : 'fade-out'}
-        sm:grid sm:grid-cols-1 sm:w-full sm:items-center`}>
+        <div
+          className={` md:h-150 md:w-75 grid grid-cols-1 gap-4 transition-transform duration-500 md:grid-cols-2 md:gap-6 ${selectedId ? "fade-in" : "fade-out"} `}
+        >
           {expData
             .filter((item) => item.id !== selectedId)
             .map((item) => (
