@@ -41,7 +41,7 @@ function AboutCard({
         >
           <Image
             src={iconSrc}
-            alt={`${title}-logo`}
+            alt={`${title.split(" ")[0]}-logo`}
             width={imgWidth}
             height={200}
             className="object-contain"

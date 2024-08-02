@@ -1,5 +1,5 @@
 import React from "react";
-import { AboutDetailProps } from "./model/AboutDetailProp";
+import { AboutDetailProps } from "./models/AboutDetailProp";
 
 export default function AboutDetail({
   title,
