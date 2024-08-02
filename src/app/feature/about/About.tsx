@@ -68,7 +68,7 @@ export default function About() {
       <p className="section-header">My Transformative Journey</p>
       <p className="section-header">In the IT Industry</p>
       {loading ? (
-        <div className="w-11/12">
+        <div className="w-2/3 md:h-3/4 lg:w-11/12">
           <Skeleton />
         </div>
       ) : (
