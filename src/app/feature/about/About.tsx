@@ -73,7 +73,7 @@ export default function About() {
           <Skeleton />
         </div>
       ) : (
-        <div className="flex w-full flex-wrap items-center justify-center gap-6 px-10 py-10 md:gap-10">
+        <div className="flex w-full flex-wrap items-center justify-center gap-4 px-10 py-10 md:gap-10">
           {company.map((item) => (
             <div key={item.coId}>
               <AboutCard
