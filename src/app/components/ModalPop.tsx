@@ -13,7 +13,7 @@ const ModalPop: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50 transition-opacity duration-300">
-      <div className="relative h-2/3 w-5/6 scale-100 transform rounded-lg bg-white p-10 shadow-lg transition-transform duration-300">
+      <div className="relative h-3/4 md:h-2/3 w-5/6 scale-100 transform rounded-lg bg-white p-10 shadow-lg transition-transform duration-300">
         <div
           onClick={onClose}
           className="absolute right-3 top-3 cursor-pointer hover:text-gray-700"
