@@ -6,6 +6,7 @@ import AboutDetail from "./AboutDetail";
 import { ProjectProps } from "./models/AboutDetailProp";
 import { CompanyEntity } from "./models/CompanyEntity";
 import Skeleton from "@/app/components/Skeleton";
+import { decrypt } from "@/app/utils/CryptoUtils";
 
 export default function About() {
   const [selectedItem, setSelectedItem] = useState<{
@@ -30,7 +31,7 @@ export default function About() {
           data.map((item: any) => ({
             coId: item.coId,
             coName: item.coName,
-            coLogo: item.coLogo,
+            coLogo: decrypt(item.coLogo),
             coBgColor: item.coBgColor,
             coDes: item.coDes,
             time: item.time,

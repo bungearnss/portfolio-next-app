@@ -5,6 +5,7 @@ import ExperienceCard from "./ExperienceCard";
 import ExperienceSubCard from "./ExperienceSubCard";
 import { ExperienceEntity } from "./models/ExperienceEntity";
 import Skeleton from "@/app/components/Skeleton";
+import { decrypt } from "@/app/utils/CryptoUtils";
 
 export default function Experience() {
   const handleClick = (url: string) => {
@@ -31,10 +32,10 @@ export default function Experience() {
           data.map((item: any) => ({
             id: item.id,
             title: item.title,
-            description: item.description,
-            img: item.img,
+            description: decrypt(item.description),
+            img: decrypt(item.img),
             date: item.date,
-            url: item.url,
+            url: decrypt(item.url),
           })),
         );
       } catch (error) {

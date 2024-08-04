@@ -4,6 +4,7 @@ import SkillCard from "./SkillCard";
 
 import { SkillEntity } from "./models/SkillEntity";
 import Skeleton from "@/app/components/Skeleton";
+import { decrypt } from "@/app/utils/CryptoUtils";
 
 export default function Skill() {
   const [skills, setSkills] = useState<SkillEntity[]>([]);
@@ -20,8 +21,8 @@ export default function Skill() {
         setSkills(
           data.map((skill: any) => ({
             id: skill.id,
-            skillLogo: skill.skillLogo,
-            skillName: skill.skillName,
+            skillLogo: decrypt(skill.skillLogo),
+            skillName: decrypt(skill.skillName),
           })),
         );
       } catch (error) {

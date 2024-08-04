@@ -4,6 +4,7 @@ import CertificateCard from "./CertificateCard";
 import ExpandCollapseButton from "./ExpandCollapseButton";
 import { CertificateEntity } from "./models/CertificateEntity";
 import Skeleton from "@/app/components/Skeleton";
+import { decrypt } from "../../utils/CryptoUtils";
 
 export default function Certificate() {
   const handleCardClick = (url: string) => {
@@ -28,6 +29,7 @@ export default function Certificate() {
   const [cert, setCert] = useState<CertificateEntity[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
     const fetchCertificate = async () => {
       try {
@@ -36,12 +38,13 @@ export default function Certificate() {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
+
         setCert(
           data.map((item: any) => ({
             id: item.id,
             title: item.title,
-            img: item.img,
-            url: item.url,
+            img: decrypt(item.img),
+            url: decrypt(item.url),
           })),
         );
       } catch (error) {
@@ -53,6 +56,8 @@ export default function Certificate() {
 
     fetchCertificate();
   }, []);
+
+  console.log(`cert : ${cert}`)
 
   return (
     <div className="flex w-full flex-col items-center justify-center">

@@ -7,7 +7,7 @@ declare global {
         MONGODB_COL_COMP: string;
         MONGODB_COL_EXP: string;
         MONGODB_COL_SKILL: string;
-        NEXT_PUBLIC_API_URL: string;
+        SECRET_KEY: string;
       }
     }
   }
