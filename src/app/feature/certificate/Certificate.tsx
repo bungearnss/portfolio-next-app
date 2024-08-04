@@ -57,8 +57,6 @@ export default function Certificate() {
     fetchCertificate();
   }, []);
 
-  console.log(`cert : ${cert}`)
-
   return (
     <div className="flex w-full flex-col items-center justify-center">
       <p className="section-header">My Certificate</p>
