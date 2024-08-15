@@ -7,43 +7,11 @@ import Experience from "./feature/experience/Experience";
 import Certificate from "./feature/certificate/Certificate";
 import Footer from "./Footer";
 import FloatingActionButton from "./components/FloatingActionButton";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState({
-    introduce: false,
-    about: false,
-    skill: false,
-    experience: false,
-    certificate: false,
-  });
-
-  const handleScroll = () => {
-    const sections = [
-      "introduce",
-      "about",
-      "skill",
-      "experience",
-      "certificate",
-    ];
-    sections.forEach((section) => {
-      const element = document.getElementById(section);
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= window.innerHeight * 0.75 && rect.bottom >= 0) {
-          setIsVisible((prevState) => ({ ...prevState, [section]: true }));
-        }
-      }
-    });
-  };
-
   useEffect(() => {
     window.scrollTo(0, 0);
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
 
   return (
@@ -55,51 +23,31 @@ export default function Home() {
 
         <div
           id="introduce"
-          className={`mt-16 w-full max-w-5xl items-center justify-start transition-all duration-700 ease-in-out md:mt-10 lg:flex ${
-            isVisible.introduce
-              ? "translate-y-0 opacity-100"
-              : "translate-y-10 opacity-0"
-          }`}
+          className="mt-16 w-full max-w-5xl items-center justify-start md:mt-10 lg:flex"
         >
           <Introduce />
         </div>
         <div
           id="about"
-          className={`mt-10 w-screen items-center justify-start bg-custom-bg py-10 transition-all duration-700 ease-in-out lg:flex ${
-            isVisible.about
-              ? "translate-y-0 opacity-100"
-              : "translate-y-10 opacity-0"
-          }`}
+          className="mt-10 w-screen items-center justify-start bg-custom-bg py-10 lg:flex"
         >
           <About />
         </div>
         <div
           id="skill"
-          className={`max-w-10xl w-full items-center justify-start py-10 transition-all duration-700 ease-in-out lg:flex ${
-            isVisible.skill
-              ? "translate-y-0 opacity-100"
-              : "translate-y-10 opacity-0"
-          }`}
+          className="max-w-10xl w-full items-center justify-start py-10 lg:flex"
         >
           <Skill />
         </div>
         <div
           id="experience"
-          className={`max-w-10xl w-screen items-center justify-start bg-custom-bg py-10 transition-all duration-700 ease-in-out lg:flex ${
-            isVisible.experience
-              ? "translate-y-0 opacity-100"
-              : "translate-y-10 opacity-0"
-          }`}
+          className="max-w-10xl w-screen items-center justify-start bg-custom-bg py-10 lg:flex"
         >
           <Experience />
         </div>
         <div
           id="certificate"
-          className={`max-w-10xl w-screen items-center justify-start bg-custom-bg transition-all duration-700 ease-in-out md:py-10 lg:flex ${
-            isVisible.certificate
-              ? "translate-y-0 opacity-100"
-              : "translate-y-10 opacity-0"
-          }`}
+          className="max-w-10xl w-screen items-center justify-start bg-custom-bg md:py-10 lg:flex"
         >
           <Certificate />
         </div>
