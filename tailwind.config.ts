@@ -16,6 +16,10 @@ const config: Config = {
         'border-custom': '#ecede5',
         'proj-bg': '#d8dfe0'
       },
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+      },
       fontFamily: {
         nunito: ['Nunito Sans', 'sans-serif'],
       }
