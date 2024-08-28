@@ -13,7 +13,13 @@ export default function Skill() {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await fetch("/api/skills");
+        const response = await fetch("/api/skills", {
+          method: "GET",
+          headers: {
+            "Cache-Control": "no-cache",
+            Pragma: "no-cache",
+          },
+        });
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -48,7 +54,7 @@ export default function Skill() {
         </p>
       </div>
       {loading ? (
-        <div className="flex h-full w-full lg:w-1/2 items-center justify-center">
+        <div className="flex h-full w-full items-center justify-center lg:w-1/2">
           <Skeleton />
         </div>
       ) : (

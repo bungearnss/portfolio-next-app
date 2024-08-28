@@ -33,7 +33,13 @@ export default function Certificate() {
   useEffect(() => {
     const fetchCertificate = async () => {
       try {
-        const response = await fetch("/api/certificates");
+        const response = await fetch("/api/certificates", {
+          method: "GET",
+          headers: {
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",      
+          },
+        });
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }

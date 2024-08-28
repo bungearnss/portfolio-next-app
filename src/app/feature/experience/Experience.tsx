@@ -23,7 +23,13 @@ export default function Experience() {
   useEffect(() => {
     const fetchExperience = async () => {
       try {
-        const response = await fetch("/api/experiences");
+        const response = await fetch("/api/experiences", {
+          method: "GET",
+          headers: {
+            "Cache-Control": "no-cache",
+            Pragma: "no-cache",
+          },
+        });
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }

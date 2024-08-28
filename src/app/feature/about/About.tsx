@@ -22,7 +22,13 @@ export default function About() {
   useEffect(() => {
     const fetchCompany = async () => {
       try {
-        const response = await fetch("/api/companies");
+        const response = await fetch("/api/companies", {
+          method: "GET",
+          headers: {
+            "Cache-Control": "no-cache",
+            Pragma: "no-cache",
+          },
+        });
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
