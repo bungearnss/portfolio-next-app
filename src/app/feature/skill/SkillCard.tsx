@@ -19,7 +19,7 @@ export default function SkillCard({ icon, imgName, id }: SkillCardProps) {
     tooltipSty =
       "absolute bottom-full mb-2 rounded bg-gray-500 px-2 py-1 text-xs text-white";
   } else {
-    bgColorClass = numericId % 2 === 0 ? "bg-white" : "bg-custom-bg";
+    bgColorClass = numericId % 2 == 0 ? "bg-white" : "bg-custom-bg";
     tooltipSty =
       "absolute top-full mt-2 rounded bg-gray-500 px-2 py-1 text-xs text-white";
   }

@@ -25,11 +25,12 @@ export default function Skill() {
         }
         const data = await response.json();
         setSkills(
-          data.map((skill: any) => ({
+          data.map((skill: SkillEntity) => ({
             id: skill.id,
             skillLogo: decrypt(skill.skillLogo),
             skillName: decrypt(skill.skillName),
-          })),
+          }))
+          .sort((a: any, b: any) => Number(a.id) - Number(b.id)) 
         );
       } catch (error) {
         setError("Failed to fetch skills");
